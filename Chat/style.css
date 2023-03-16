@@ -34,7 +34,7 @@ tr:nth-child(even) {
     border-color: #dad610e7;
 }
 
-tbody {
+.tbody {
     border: solid 4px black;
     border-radius: 10px;
     padding: 20px;
@@ -50,4 +50,33 @@ input {
 
 #msg {
     color: red;
+}
+
+#chattable{
+    overflow-y: scroll;
+    height: 400px;
+}
+.table{
+    width: 50%;
+    table-layout: fixed;
+}
+.currentuser{
+    margin: 10px;
+    margin-left:50%;
+    background-color: #08f8f8ef;
+    border: 1px solid #08f8f8ef;
+    border-radius:10px;
+    width: fit-content;
+
+}
+tr{
+    font-size:auto;
+    margin: 10px;
+    margin-right:50%;
+    background-color:#f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius:10px;
+    width: fit-content;
+    padding: 5px;
+
 }
