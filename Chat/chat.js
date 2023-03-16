@@ -70,3 +70,8 @@ async function getchats(e) {
         }, 3000)
     }
 }
+
+
+    setInterval(()=>{
+            getchats();
+        },1000); 
