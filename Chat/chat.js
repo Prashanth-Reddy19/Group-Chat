@@ -10,7 +10,9 @@ const groupname = document.getElementById('groupname');
 
 const deletegroupbtn = document.getElementById('deletegroupbtn');
 
-const adminname = document.getElementById('adminname')
+const adminname=document.getElementById('adminname');
+
+const socket = io('http://localhost:8000');
 
 sendbtn.addEventListener('click', sendmessage);
 
@@ -31,7 +33,9 @@ async function sendmessage(e) {
             const groupId = JSON.parse(localStorage.getItem('groupId'))
             const response = await axios.post('http://localhost:3000/chat/add-message', messagedata, { headers: { "Authorization": token } })
 
-            console.log(response.data, ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+            console.log(response.data,">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+               socket.emit('send-message', groupId);
 
             showmessage(response.data.message.name, response.data.message.message)
 
@@ -129,6 +133,16 @@ async function getchats(e) {
         }, 3000)
     }
 }
+
+socket.on('receive-message', async (group) => {
+    const groupId=JSON.parse(localStorage.getItem('groupId'));
+    console.log(">>>>>",group,groupId);
+    console.log(group===groupId);
+    if(group === groupId){
+        getchats();
+        getgroupmembers();
+    }
+  })
 
 
 // setInterval(() => {
