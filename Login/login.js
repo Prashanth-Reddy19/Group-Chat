@@ -13,10 +13,15 @@ async function login(event) {
         alert(response.data.message)
         console.log(response.data)
         localStorage.setItem('token', response.data.token)
-        window.location.href = "../Expense/expense.html"
+        window.location.href = '../Group/group.html'
 
     } catch (err) {
 
-        document.body.innerHTML += `<div style="color:red">${err}</div>`
+        console.log(err);
+        msg.innerHTML = "";
+        msg.innerHTML = msg.innerHTML + `<div>${err.response.data.message}</div>`;
+        setTimeout(() => {
+            msg.innerHTML = "";
+        }, 3000)
     }
 }

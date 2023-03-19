@@ -11,17 +11,26 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Group chat</h1>
-        <div id="msg">
+    <div class="main-container">
+        <div class="container1">
+            <button id="deletegroupbtn" class="btn">Delete Group</button>
+            <h1>Members</h1>
+            <ul id="memberslist">
+            </ul>
         </div>
-        <table class="table">
-            <tbody id="chattable">
-            </tbody>
-        </table><br><br>
-        <div class="messagebox">
-            <input type="text" id="message" required>
-            <button class="btn" id="sendbtn">Send</button>
+        <div class="container2">
+            <h1 id="groupname"></h1>
+            <h4 id="adminname"></h4>
+            <div id="msg">
+            </div>
+            <table class="table">
+                <tbody id="chattable">
+                </tbody>
+            </table><br>
+            <div class="messagebox">
+                <input type="text" id="message" required>
+                <button class="btn" id="sendbtn">Send</button>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>

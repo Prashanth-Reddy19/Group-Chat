@@ -5,6 +5,7 @@ async function signup(e) {
         const signupDetails = {
             name: e.target.name.value,
             email: e.target.email.value,
+            number: e.target.number.value,
             password: e.target.password.value
         }
         console.log(signupDetails)
@@ -17,6 +18,11 @@ async function signup(e) {
         }
 
     } catch (err) {
-        document.body.innerHTML += `<div style="color:red">${err}</div>`
+        console.log(err);
+        msg.innerHTML = ""
+        msg.innerHTML = msg.innerHTML + `<div>${err.response.data.message}</div>`;
+        setTimeout(() => {
+            msg.innerHTML = "";
+        }, 3000)
     }
 }

@@ -1,0 +1,27 @@
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:2rem;
+}
+.myform{
+    border: solid black 2px;
+    border-radius: 1rem;
+    padding:3rem;
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+.form-control,.form-label{
+    padding:0.5rem;
+    width: 100%;
+  }
+
+  .form-control{
+    border:2px solid black;
+    border-radius:4px;
+    margin-left: 10px;
+  }
