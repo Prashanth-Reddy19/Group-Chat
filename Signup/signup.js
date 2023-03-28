@@ -3,7 +3,7 @@ async function signup(e) {
         e.preventDefault();
 
         const signupDetails = {
-            name: e.target.name.value,
+            username: e.target.name.value,
             email: e.target.email.value,
             number: e.target.number.value,
             password: e.target.password.value
@@ -18,11 +18,6 @@ async function signup(e) {
         }
 
     } catch (err) {
-        console.log(err);
-        msg.innerHTML = ""
-        msg.innerHTML = msg.innerHTML + `<div>${err.response.data.message}</div>`;
-        setTimeout(() => {
-            msg.innerHTML = "";
-        }, 3000)
+       console.log(err)
     }
 }

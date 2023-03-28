@@ -42,8 +42,7 @@ catch(err){
 
 async function showgroup(response){
     try{
-          const username=JSON.parse(localStorage.getItem(`adminname${response.id}`));
-          console.log(username);
+         
 
             groupList.innerHTML+=`<li id='${response.id}'><button class='btn' onclick="showchat('${response.groupname}','${response.id}')">${response.groupname}</button></li>`;
     }catch(err){

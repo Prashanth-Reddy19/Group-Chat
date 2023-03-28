@@ -11,6 +11,7 @@ async function login(event) {
         console.log(loginDetails)
         const response = await axios.post('http://localhost:3000/user/login', loginDetails)
         alert(response.data.message)
+
         console.log(response.data)
         localStorage.setItem('token', response.data.token)
         window.location.href = '../Group/group.html'

@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    
     <link rel="stylesheet" href="style.css">
     <title>Chat</title>
 </head>
+
 <body>
-<div class="main-container">
-    <div class="container1">
-        <button id="deletegroupbtn" class="btn">Delete Group</button>
-        <h1>Members</h1>
-        <ul id="memberslist">
-        </ul>
-    </div>
-    <div class="container2">
-        <h1 id="groupname"></h1>
-        <h4 id="adminname"></h4>
-        <div id="msg">
+    <div class="main-container">
+        <div class="container1">
+            <button id="deletegroupbtn" class="btn">Delete Group</button>
+            <h1>Members</h1>
+            <ul id="memberslist">
+            </ul>
         </div>
-        <table class="table">
-            <tbody id="chattable">
-            </tbody>
-        </table><br>
-        <div class="messagebox">
-            <input type="file" id="file">
-            <button class="btn" id="uploadbtn">Upload</button>
-            <input type="text" id="message" placeholder="Send messages Here" required>
-            <button class="btn" id="sendbtn">Send</button>
+        <div class="container2">
+            <h1 id="groupname"></h1>
+            <h4 id="adminname"></h4>
+            <div id="msg">
+            </div>
+            <table class="table">
+                <tbody id="chattable">
+                </tbody>
+            </table><br>
+            <div class="messagebox">
+                <input type="file" id="file">
+                <button class="btn" id="uploadbtn">Upload</button>
+                <input type="text" id="message" placeholder="Send messages Here" required>
+                <button class="btn" id="sendbtn">Send</button>
+            </div>
         </div>
     </div>
-</div>
-<script src="http://localhost:8000/socket.io/socket.io.js"></script>
-<script src="chat.js"></script>
+    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="chat.js"></script>
 </body>
+
 </html>
